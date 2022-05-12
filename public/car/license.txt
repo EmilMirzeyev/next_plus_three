@@ -1,0 +1,11 @@
+Model Information:
+* title:	Buchanka Snow Glider
+* source:	https://sketchfab.com/3d-models/buchanka-snow-glider-d5041ed691e24f3c98ab36ad17ce8a48
+* author:	Mateusz Woliński (https://sketchfab.com/jeandiz)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Buchanka Snow Glider" (https://sketchfab.com/3d-models/buchanka-snow-glider-d5041ed691e24f3c98ab36ad17ce8a48) by Mateusz Woliński (https://sketchfab.com/jeandiz) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
