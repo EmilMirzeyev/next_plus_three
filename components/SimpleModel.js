@@ -40,7 +40,7 @@ const SimpleModel = () => {
       const hemiLight = new THREE.HemisphereLight(0x888888, 0x080820, 4);
       scene.add(hemiLight);
 
-      const spotLight = new THREE.SpotLight(0xfff9e4, 5);
+      const spotLight = new THREE.SpotLight(0xfff9e4, 3);
       spotLight.castShadow = true;
       setSpotLight(spotLight);
       scene.add(spotLight);
@@ -59,15 +59,15 @@ const SimpleModel = () => {
       setControls(controls);
 
       const loader = new GLTFLoader();
-      loader.load("/car/scene.gltf", function (gltf) {
+      loader.load("/archive/Astronaut.gltf", function (gltf) {
         scene.add(gltf.scene);
         setModel(() => gltf.scene.children[0]);
         let box = new THREE.Box3().setFromObject(gltf.scene);
         let center = box.getCenter(new THREE.Vector3());
-        let size = box.getSize(new THREE.Vector3());
         gltf.scene.position.x -= center.x;
         gltf.scene.position.y -= center.y;
         gltf.scene.position.z -= center.z;
+        setLoading(false);
         (function animate() {
           requestAnimationFrame(animate);
           spotLight.position.set(
@@ -76,7 +76,7 @@ const SimpleModel = () => {
             camera.position.z + 10
           );
           spotLight.rotation.y + 1;
-          // gltf.scene.rotation.y += 0.01;
+          gltf.scene.rotation.y += 0.01;
           renderer.render(scene, camera);
         })();
       });
