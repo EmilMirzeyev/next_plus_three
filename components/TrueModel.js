@@ -51,15 +51,26 @@ const TrueModel = () => {
       setRenderer(renderer);
 
       const scale = (scW / 2) * 0.01;
-      const camera = new THREE.OrthographicCamera(
-        -scale,
-        scale,
-        scale,
-        -scale / 2,
-        0.01,
-        50000
+      //   const camera = new THREE.OrthographicCamera(
+      //     -scale,
+      //     scale,
+      //     scale,
+      //     -scale / 2,
+      //     0.01,
+      //     50000
+      //   );
+      //   camera.position.copy(initialCameraPosition);
+      const camera = new THREE.PerspectiveCamera(
+        40,
+        window.innerWidth / window.innerHeight,
+        1,
+        1000
       );
-      camera.position.copy(initialCameraPosition);
+      camera.position.set(1, 1, 1);
+
+      const cubeRenderTarget = new THREE.WebGLCubeRenderTarget(256);
+
+      const cubeCamera = new THREE.CubeCamera(1, 1000, cubeRenderTarget);
       camera.lookAt(target);
       setCamera(camera);
 
