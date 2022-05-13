@@ -9,7 +9,7 @@
   width: 100%;
   position: relative;
 }
-
+/* 
 .canvas::after {
   content: "";
   position: absolute;
@@ -21,4 +21,4 @@
   border-radius: 50%;
   background-color: red;
   z-index: 1001;
-}
+} */
